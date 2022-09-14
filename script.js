@@ -109,11 +109,13 @@ const start = () => {
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
+
     // finished timer
     if (count == 0) {
+
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
@@ -134,5 +136,5 @@ setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
   const intTime = Math.round(timeSpent)
-  document.getElementById("show-time").innerHTML = `${startTime ? Time : 0} seconds`;
+  document.getElementById("show-time").innerHTML = `${startTime ? intTime : 0} seconds`;
 }, 1000);
