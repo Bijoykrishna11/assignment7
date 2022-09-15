@@ -152,7 +152,7 @@ button {
 #histories {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 @media only screen and (min-width: 992px) {
